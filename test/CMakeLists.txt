@@ -1274,6 +1274,17 @@ set(TESTRESTARTMANAGER_SOURCES
 add_unit_test(NAME testRestartManager
               SOURCES ${TESTRESTARTMANAGER_SOURCES})
 
+## Unit test for AtomicValue
+if(HAVE_OPENMP)
+set(TESTATOMICVALUE_SOURCES
+    testAtomicValue.cpp
+
+    ../src/AtomicValue.hpp
+)
+add_unit_test(NAME testAtomicValue
+              SOURCES ${TESTATOMICVALUE_SOURCES})
+endif(HAVE_OPENMP)
+
 ### Python module unit tests ###################################################
 macro(add_python_unit_test)
     set(oneValueArgs NAME)
