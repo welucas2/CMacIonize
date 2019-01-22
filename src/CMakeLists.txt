@@ -293,6 +293,7 @@ set(LIBTASKBASEDIONIZATIONSIMULATION_SOURCES
 
     AtomicValue.hpp
     CPUCycle.hpp
+    MemorySpace.hpp
     PhotonBuffer.hpp
     PhotonPacket.hpp
     Task.hpp
